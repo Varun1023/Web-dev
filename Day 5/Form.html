@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color:rgb(243, 233, 225);   
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+        .main {
+            color: black;
+            font-size: 17px;
+            width: 500px;
+            margin: 100px auto;
+            border: 5px solid navy;
+            box-shadow: 9px 11px 19px -5px rgba(231,205,205,0.75);
+            padding: 10px 15px;
+            background-color: #fff;
+            
+            
+        }
+
+        .row {
+            margin: 20px 0px;
+            width: 90%;
+            /* border: 1px solid black; */
+            padding: 0px 10px;
+
+        }
+
+        .row input {
+            padding: 10px 0px;
+            width: 100%;
+        }
+
+        button {
+            font-weight: bold;
+            padding: 15px 40px;
+            background-color:blue;
+            color: white;
+            font-size: 18px;
+
+        }
+
+        .save {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <form>
+            <h1 style="padding-left: 40%;"><u>FORM</u></h1>
+            <div class="row">
+                <label>First Name:</label>
+                <input type="text" placeholder="Enter Your  Name">
+            </div>
+            <div class="row">
+                <label>Last Name:</label>
+                <input type="text" placeholder="Enter Your  Name">
+            </div>
+            <div class="row">
+                <label>Email:</label>
+                <br>
+                <input type="email" placeholder="Enter Your Email">
+            </div>
+            <div class="row">
+                <label>Number:</label>
+                <input type="number" placeholder="Enter Your Number:">
+            </div>
+            <div class="row">
+                <label>Image:</label>
+                <input type="file">
+            </div>
+            <div class="row save">
+                <button>SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
