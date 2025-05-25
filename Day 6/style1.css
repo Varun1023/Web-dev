@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+   
+    text-align: center;
+    margin: 50px auto;
+    background-color: rgb(241, 224, 241);
+    border: 5px solid black;
+    
+}
+.sign-up{
+    text-align: center;
+    line-height: 30px;
+    width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 250px;
+    margin-right: 80px;
+    margin-bottom: 50px;
+    line-height: 80px;
+    background-color:rgb(229, 225, 217);
+    border: 5px solid black;
+    
+}
+
+button{
+    padding: 10px 15px;
+}
+
+
+form input{
+    padding: 4px 0px;
+} 
