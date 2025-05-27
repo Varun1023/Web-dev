@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doremon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to top, #87ceeb, #ffffff);
+            font-family: sans-serif;
+        }
+
+        .main {
+            width: 900px;
+            height: 600px;
+            margin: auto;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .face {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: 6%;
+            left: 37%;
+            border-radius: 50%;
+            background-color: #1e90ff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .lefteye, .righteye {
+            width: 28px;
+            height: 45px;
+            background-color: white;
+            position: absolute;
+            top: 23%;
+            border-radius: 50%;
+            box-shadow: inset 0 0 5px #ccc;
+        }
+
+        .lefteye { left: 29%; }
+        .righteye { left: 55%; }
+
+        .blackinner {
+            width: 11px;
+            height: 20px;
+            background-color: black;
+            position: absolute;
+            top: 51%;
+            left: 31%;
+            border-radius: 50%;
+        }
+
+        .whiteinner {
+            width: 5px;
+            height: 10px;
+            background-color: white;
+            position: absolute;
+            top: 28%;
+            left: 22%;
+            border-radius: 50%;
+        }
+
+        .nose {
+            width: 28px;
+            height: 15px;
+            background-color: red;
+            position: absolute;
+            top: 48%;
+            left: 42%;
+            border-radius: 50%;
+        }
+
+        .mouth {
+            width: 70px;
+            height: 34px;
+            background-color: white;
+            position: absolute;
+            top: 65%;
+            left: 35%;
+            border-radius: 0 0 50px 50px;
+            overflow: hidden;
+        }
+
+        .innermouth {
+            width: 46px;
+            height: 28px;
+            background-color: red;
+            position: absolute;
+            top: 0%;
+            left: 17%;
+            border-radius: 0 0 50px 50px;
+        }
+
+        .tie {
+            width: 92px;
+            height: 20px;
+            background-color: red;
+            position: absolute;
+            top: 94%;
+            left: 32%;
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        .tiecircle {
+            width: 20px;
+            height: 20px;
+            background-color: yellow;
+            position: absolute;
+            top: 0%;
+            left: 36%;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        }
+
+        .doremon-body {
+            width: 255px;
+            height: 251px;
+            background-color: #1e90ff;
+            position: absolute;
+            top: 97%;
+            left: -1%;
+            border-radius: 71px 71px 0 0;
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        .pocket {
+            width: 109px;
+            height: 51px;
+            background-color: white;
+            position: absolute;
+            top: 44%;
+            left: 28%;
+            border-radius: 0 0 50px 50px;
+            box-shadow: inset 0 0 5px #aaa;
+        }
+
+        .leftleg, .rightleg {
+            width: 141px;
+            height: 50px;
+            background-color: white;
+            position: absolute;
+            top: 188%;
+            border-radius: 50px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .leftleg { left: -9%; }
+        .rightleg { left: 47%; }
+
+        .lefthand, .righthand {
+            background-color: #1e90ff;
+            position: absolute;
+            top: 109%;
+        }
+
+        .lefthand {
+            width: 50px;
+            height: 137px;
+            left: -10%;
+            border-radius: 40px 40px 0 0;
+        }
+
+        .righthand {
+            width: 124px;
+            height: 57px;
+            left: 95%;
+            border-radius: 0 40px 40px 0;
+        }
+
+        .leftball, .rightball {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .leftball { top: 84%; left: 0%; }
+        .rightball { top: 6%; left: 71%; }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="face">
+            <div class="lefteye">
+                <div class="blackinner">
+                    <div class="whiteinner"></div>
+                </div>
+            </div>
+            <div class="righteye">
+                <div class="blackinner">
+                    <div class="whiteinner"></div>
+                </div>
+            </div>
+            <div class="nose"></div>
+            <div class="mouth">
+                <div class="innermouth"></div>
+            </div>
+            <div class="tie">
+                <div class="tiecircle"></div>
+            </div>
+            <div class="doremon-body">
+                <div class="pocket"></div>
+            </div>
+            <div class="leftleg"></div>
+            <div class="rightleg"></div>
+            <div class="lefthand">
+                <div class="leftball"></div>
+            </div>
+            <div class="righthand">
+                <div class="rightball"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
