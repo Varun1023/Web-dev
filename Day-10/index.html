@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Tap</title>
+    <style>
+        body {
+            background-color: #070721;
+            text-align: center;
+
+        }
+
+        @keyframes barmotion {
+            0% {
+                transform: scaleY(1);
+            }
+
+            50% {
+                transform: scaleY(1.5);
+            }
+
+            100% {
+                transform: scaleY(1);
+            }
+        }
+
+        .main {
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+            /* border: 1px solid white; */
+            position: relative;
+        }
+
+        .bar1 {
+            width: 15px;
+            height: 254px;
+            /* border: 1px solid white; */
+            margin: auto;
+            position: absolute;
+            top: 25%;
+            left: 20%;
+            background-color: #FFA500;
+            animation: barmotion 3s 0s infinite linear;
+        }
+
+        .bar2 {
+            width: 15px;
+            height: 250px;
+            /* border: 1px solid white; */
+            margin: auto;
+            position: absolute;
+            top: 25%;
+            left: 35%;
+            background-color: #ADD8E6;
+            animation: barmotion 3s 1s infinite linear;
+
+        }
+
+        .bar3 {
+            width: 15px;
+            height: 240px;
+            /* border: 1px solid white; */
+            margin: auto;
+            position: absolute;
+            top: 25%;
+            left: 49%;
+            background-color: #FFFF00;
+            animation: barmotion 3s 2s infinite linear;
+        }
+
+        .bar4 {
+            background-color: #008000;
+            width: 15px;
+            height: 240px;
+            /* border: 1px solid white; */
+            margin: auto;
+            position: absolute;
+            top: 25%;
+            left: 64%;
+            animation: barmotion 3s 1s infinite linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+    </div>
+</body>
+
+</html>
