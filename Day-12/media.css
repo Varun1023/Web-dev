@@ -1,0 +1,75 @@
+@media only screen and (min-width:200px) and (max-width:567px) {
+    header nav aside:nth-child(2) {
+        display: none;
+    }
+
+    header nav aside:nth-child(1) {
+        padding-left: 94px;
+    }
+
+    main section:nth-child(1) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main section aside:nth-child(1) {
+        width: 100%;
+        /* border: 1px solid black; */
+    }
+
+
+    main section h1 {
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 62px;
+        line-height: 68px;
+        letter-spacing: 0%;
+        margin-bottom: 5px;
+        padding-left: 7px;
+    }
+
+    main section p{
+        padding-left: 8px;
+    }
+
+
+    main section aside:nth-child(2) {
+        width: 100%;
+       
+        
+    }
+    .form-section .form-r1{
+        padding: 5px 0px;
+        width: 135%;
+        /* border: 1px solid black; */
+        margin: 4px -24px;
+    }
+
+    .form-section button{
+        margin: 12px -29px;
+    }
+
+    #inforow {
+        max-width: 1200px;
+        /* border: 1px solid red; */
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: space-evenly; */
+    }
+
+    #inforow .box-1{
+        margin: 0px 32px;
+    }
+    
+    #keyhighlight .modules .module-1 {
+        
+        display: flex;
+        width: 46%;
+
+    }
+
+    #keyhighlight button{
+    margin: 12px 108px;
+    }
+}
