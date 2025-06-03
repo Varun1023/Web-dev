@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+          
+        }
+
+        body{
+            background-color: aliceblue;
+        }
+        .main {
+            width: 100%;
+            margin: auto;
+            box-shadow: 0px 2px 10px 0px #ccc;
+           
+
+        }
+
+        .main>ul {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 30px;
+            padding: 30px 0px;
+            margin-top: 10px;
+        }
+
+        .main>ul>li {
+            position: relative;
+            cursor: pointer;
+        }
+
+
+        .submenu {
+            background-color: rgb(177, 149, 180);
+            position: absolute;
+            top: 186%;
+            left: -100%;
+            opacity: 0;
+            visibility: visible;
+            transition: 1s;
+            
+        }
+
+        .main>ul>li:hover .submenu {
+            opacity: 1;
+            visibility: visible;
+            left: -5%;
+        }
+
+
+        .submenu-2 {
+            background-color: rgb(177, 149, 180);
+            position: absolute;
+            top: 100%;
+            left: -5%;
+            opacity: 0;
+            visibility: hidden;
+            transition: 1s;
+        }
+
+
+        .main>ul>li:hover .submenu-2 {
+            opacity: 1;
+            visibility: visible;
+            top: 186%;
+        }
+
+        .submenu-3 {
+            background-color: rgb(177, 149, 180);
+            position: absolute;
+            top: 191%;
+            /* left: -5%; */
+            right: 10%;
+            transition: 1s;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+
+        .main>ul>li:hover .submenu-3 {
+            opacity: 1;
+            visibility: visible;
+            /* top: 186%; */
+            right: 25%;
+        }
+
+
+        .subsubmenu {
+            background-color: beige;
+            position: absolute;
+            top: 0%;
+            left: 100%;
+            transition: 1s;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .main>ul>li>.submenu>ul>li:hover .subsubmenu {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <ul>
+            <li>City
+                <div class="submenu">
+                    <ul>
+                        <li>Jodhpur
+                            <div class="subsubmenu">
+                                <ul>
+                                    <li>Ratanada</li>
+                                    <li>Pratap Nagar</li>
+                                    <li>Bhaskar circle</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>Jaiour</li>
+                        <li>Ajmer</li>
+                    </ul>
+                </div>
+            </li>
+            <li>State
+                <div class="submenu-2">
+                    <ul>
+                        <li>Rajasthan</li>
+                        <li>Delhi</li>
+                        <li>UP</li>
+                    </ul>
+                </div>
+            </li>
+            <li>Country
+                <div class="submenu-3">
+                    <ul>
+                        <li>India</li>
+                        <li>China</li>
+                        <li>USA</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
