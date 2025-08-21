@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f9f9f9, #dbeafe); /* soft gradient */
+    color: #333;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-radius: 16px;
+    background: white;
+    padding: 20px;
+    min-height: 90vh;
+}
+
+/* New Tabbing Bar */
+.scroll-tab-container {
+    background: #ffffff;
+    margin: 16px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #e5e7eb;
+    padding: 8px 0;
+}
+
+.scroll-tab-container ul {
+    display: flex;
+    gap: 12px;
+    padding: 8px 24px;
+    margin: 0;
+    list-style: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.scroll-tab-container ul::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-tab-container a {
+    color: #374151;
+    text-decoration: none;
+    background: #f3f4f6;
+    padding: 8px 20px;
+    display: inline-block;
+    border-radius: 9999px; /* pill style */
+    user-select: none;
+    white-space: nowrap;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.scroll-tab-container a:hover {
+    background: #2563eb;
+    color: white;
+}
+
+.scroll-tab-container a.active {
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+}
+
+/* Arrows */
+.scroll-tab-container .left-arrow,
+.scroll-tab-container .right-arrow {
+    position: absolute;
+    height: 100%;
+    width: 80px;
+    top: 0;
+    display: none;
+    align-items: center;
+    padding: 0 10px;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.scroll-tab-container .right-arrow {
+    right: 0;
+    justify-content: flex-end;
+    background: linear-gradient(to left, #fff 70%, transparent);
+}
+
+.scroll-tab-container .left-arrow {
+    left: 0;
+    background: linear-gradient(to right, #fff 70%, transparent);
+}
+
+.scroll-tab-container svg {
+    width: 28px;
+    height: 28px;
+    padding: 6px;
+    cursor: pointer;
+    color: #2563eb;
+    transition: 0.2s;
+    pointer-events: auto;
+}
+
+.scroll-tab-container svg:hover {
+    background: #e0e7ff;
+    border-radius: 50%;
+}
+
+.scroll-tab-container .left-arrow.active,
+.scroll-tab-container .right-arrow.active {
+    display: flex;
+}
+
+/* Images Grid */
+.tab-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.tab-body > div {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.tab-body > div:hover {
+    transform: scale(1.03);
+}
+
+.tab-body img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
