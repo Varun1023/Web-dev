@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LightBox</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f8f8f8;
+    }
+
+    .main {
+      max-width: 1000px;
+      margin: 10px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 10px;
+    }
+
+    .box img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .box img:hover {
+      transform: scale(1.05);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: scale(0);
+      transition: 0.3s;
+    }
+
+    .lightbox.active {
+      transform: scale(1);
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 8px;
+    }
+
+    .lightbox span {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>LightBox</h1>
+  <div class="main">
+
+    <div class="box"><img src="https://i.pinimg.com/736x/d8/3f/7c/d83f7c908a4908c88578cf6bfa9207f8.jpg" alt=""></div>
+    <div class="box"><img
+        src="https://www.giantfreakinrobot.com/wp-content/uploads/2021/03/call-of-duty-modern-warfare.jpg" alt=""></div>
+    <div class="box"><img src="https://images.hdqwalls.com/download/call-of-duty-2048x2048.jpg" alt=""></div>
+    <div class="box"><img src="https://images.justwatch.com/poster/297859466/s718/game-of-thrones.jpg" alt=""></div>
+    <div class="box">
+      <img
+        src="https://images.unsplash.com/photo-1648413653819-7c0fd93e8e6a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3dhZ29ufGVufDB8fDB8fHww"
+        alt="">
+    </div>
+
+    <div class="box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4BYmZe5rt6zWxizLhDCrPU1NO0LFlVFVZNA&s" alt="">
+    </div>
+
+    <div class="box">
+      <img src="https://i.pinimg.com/474x/f4/ba/5a/f4ba5aee23bbe9d14a5211ac38ec591a.jpg" alt="">
+    </div>
+
+    <div class="box">
+      <img src="https://images.justwatch.com/poster/297859466/s718/game-of-thrones.jpg" alt="">
+    </div>
+
+    <div class="box">
+      <img
+        src="https://m.media-amazon.com/images/M/MV5BOWJjMGViY2UtNTAzNS00ZGFjLWFkNTMtMDBiMDMyZTM1NTY3XkEyXkFqcGc@._V1_.jpg"
+        alt="">
+    </div>
+
+    <div class="box">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.X9DMgCrFWDDdw2x-td_LrAHaEK?r=0&cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3"
+        alt="">
+    </div>
+
+    <div class="box">
+      <img
+        src="https://th.bing.com/th/id/R.cfeacd4641cca0e6f6ffba23b807a897?rik=%2bdZ0nenngS5Zpg&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2015%2f02%2fbeautiful-mountain.jpg&ehk=13Qa308guXXwbNR4xV0aKRbk6yDrBr4Y%2fs07UHwUZao%3d&risl=&pid=ImgRaw&r=0"
+        alt="">
+    </div>
+
+    <div class="box">
+      <img
+        src=" https://tse4.mm.bing.net/th/id/OIP.WI2odjYKCq_VkYovC30GZQHaFU?r=0&cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3"
+        alt="">
+    </div>
+
+  </div>
+
+  <div class="lightbox">
+    <span>&times;</span>
+    <img src="" alt="">
+  </div>
+
+  <script>
+    const images = document.querySelectorAll(".box img");
+    const lightbox = document.querySelector(".lightbox");
+    const lightboxImg = document.querySelector(".lightbox img");
+    const closeBtn = document.querySelector(".lightbox span");
+
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add("active");
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      lightbox.classList.remove("active");
+    });
+  </script>
+
+</body>
+
+</html>
